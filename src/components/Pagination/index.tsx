@@ -1,4 +1,4 @@
-import { Box, Stack } from '@chakra-ui/react';
+import { Box, Stack, Text } from '@chakra-ui/react';
 import { PaginationItem } from './PaginationItem';
 
 interface PaginationProps {
@@ -48,25 +48,58 @@ export function Pagination({
       align='center'
     >
       <Box>
-        <strong>0</strong> - <strong>10</strong> de <strong>100</strong>
+        <strong>0</strong> - <strong>10</strong> de{' '}
+        <strong>{totalCountOfRegisters}</strong>
       </Box>
       <Stack direction='row' spacing='2'>
-        {currentPage > 1 + siblingsCount && <PaginationItem number={1} />}
+        {currentPage > 1 + siblingsCount && (
+          <>
+            <PaginationItem onPageChange={onPageChange} number={1} />
+            {currentPage > 2 + siblingsCount && (
+              <Text color='gray.300' w='8' align='center'>
+                ...
+              </Text>
+            )}
+          </>
+        )}
 
         {previousPage.length > 0 &&
           previousPage.map((page) => {
-            return <PaginationItem number={page} key={page} />;
+            return (
+              <PaginationItem
+                onPageChange={onPageChange}
+                number={page}
+                key={page}
+              />
+            );
           })}
 
-        <PaginationItem number={currentPage} isCurrent />
+        <PaginationItem
+          onPageChange={onPageChange}
+          number={currentPage}
+          isCurrent
+        />
 
         {nextPages.length > 0 &&
           nextPages.map((page) => {
-            return <PaginationItem number={page} key={page} />;
+            return (
+              <PaginationItem
+                onPageChange={onPageChange}
+                number={page}
+                key={page}
+              />
+            );
           })}
 
         {currentPage + siblingsCount < lastPage && (
-          <PaginationItem number={lastPage} />
+          <>
+            {currentPage + 1 + siblingsCount < lastPage && (
+              <Text color='gray.300' w='8' align='center'>
+                ...
+              </Text>
+            )}
+            <PaginationItem onPageChange={onPageChange} number={lastPage} />
+          </>
         )}
       </Stack>
     </Stack>
