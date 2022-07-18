@@ -6,10 +6,8 @@ Made with: **ReactJS**, **Redux** and **styled-components**
 ![Printscreen](./public/screenshot.png)
 
 ## Technologies
-- NextJS
-- Redux
-- Styled-components
-- Redux-saga
+- ReactJS
+- Chakra UI
 
 ## Setup
 To run this project, install it locally using yarn:
