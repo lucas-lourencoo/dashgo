@@ -1,8 +1,5 @@
 # dashgo
 
-One frontend Challenge made by MKS to approve skills of candidates to job.
-Made with: **ReactJS**, **Redux** and **styled-components**
-
 ## Technologies
 - ReactJS
 - Chakra UI
