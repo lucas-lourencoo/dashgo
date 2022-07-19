@@ -46,4 +46,4 @@ Feito por Lucas Lourenço 👋🏽
 [![Gmail Badge](https://img.shields.io/badge/-lucascelestiano@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:lucascelestiano@gmail.com)](mailto:lucascelestiano@gmail.com)
 
 ## 📝 Licença
-Este projeto esta sobe a licença [MIT](./LICENSE).
+Este projeto esta sobe a licença [MIT](./LICENSE.md).
