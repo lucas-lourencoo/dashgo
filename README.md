@@ -1,4 +1,7 @@
 # dashgo
+
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+
 ## Descrição do Projeto
 <p align="center">This project was made in Rocketseat Ignite course. It's a dashboard made with Chakra UI and React.</p>
 
